@@ -1,0 +1,110 @@
+:root {
+	--section-y-margin : 20px;
+	--main-x-padding : 5%;
+	--svg-size : 3rem;
+	--svg-gap : 4px;
+}
+
+body {
+	min-height: 100vh;
+	position: relative;
+}
+
+main {
+	font-family: Arial, Helvetica, sans-serif;
+	padding-top: 10px;
+	padding-bottom: 2rem;
+	margin-left: var(--main-x-padding);
+	margin-right: var(--main-x-padding);
+}
+
+h1 {
+	color: midnightblue;
+}
+
+section {
+	margin-top: var(--section-y-margin);
+	margin-bottom: var(--section-y-margin);
+}
+
+#tools div {
+	display: grid;
+	grid-template-columns: repeat( auto-fill, minmax( var(--svg-size), 1fr ) );
+	gap: var(--svg-gap);
+}
+
+#tools div span img {
+	width: var(--svg-size);
+	height: var(--svg-size);
+	margin: 2px;
+}
+#tools div span img:hover {
+	transform: scale(1.2);
+	transition-duration: 200ms;
+}
+
+
+p {
+	font-size: 1.2rem;
+}
+
+
+#links div a {
+	display: flex;
+	flex-direction: column;
+	padding: 2px;
+}
+
+
+
+
+
+footer {
+	position: absolute;
+	min-width: 100%;
+	bottom: 0px;
+	display: block;
+}
+
+footer p {
+	min-width: 100%;
+	text-align: center;
+	display: block;
+}
+
+
+
+/* utils */
+
+hr {
+	position: relative;
+	height: 2px;
+	border: none;
+	background: rgb(107, 107, 107);
+}
+
+a {
+	text-decoration: none;
+	color: cornflowerblue;
+}
+
+@media screen and ( min-width: 768px ) {
+	:root {
+		--svg-size: 40px;
+		--svg-gap: 10px
+	}
+	#row {
+		display: grid;
+		grid-template-columns: 2fr 0fr 1fr;
+	}
+	#row > section {
+		padding-left: 20px;
+	}
+}
+
+
+@media screen and (min-width : 992px) {
+	:root {
+		--main-x-padding : 20%;
+	}
+}
